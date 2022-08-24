@@ -1,0 +1,35 @@
+
+.main-container{
+    background-color: #F5F5F5;
+}
+
+.left-container{
+    width: 35.33%!important;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.name{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.left-container .card{
+    margin: 20px;
+    box-shadow: 5px 5px #707671;
+}
+.right-container{
+    width: 60%!important;
+    padding-right: 50px;
+    padding-top: 20px;
+    height: 60%;
+   
+}
+.right-container .card{
+    box-shadow: 5px 5px #707671;
+}
+.card-body{
+    text-align: center;
+}
+.c-green{
+    color: #3E9788;
+}

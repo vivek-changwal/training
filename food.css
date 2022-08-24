@@ -1,0 +1,104 @@
+.body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+.link {
+ padding: 0px 7px;
+ font-family: 'Times New Roman', Times, serif;
+}
+.home{
+  padding: 210px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.burger {
+  padding: 0 200px;
+  width: 30px;
+  padding-top: 20;
+}
+
+.content {
+  padding-top: 40px;
+  padding-left: 250px;
+}
+.left-container {
+  float: left;
+  opacity: 70%;
+}
+.right-container {
+  padding-left: 50%;
+  padding-right: 20%;
+  padding-top: 10%;
+  padding-bottom: 20%;
+}
+.bottom-line {
+  margin: 0px 200px;
+  opacity: 20%;
+}
+.grey-highlight {
+  background-color: lightgray;
+  padding: 1px 5px;
+}
+.light-text { 
+  opacity: 50%;
+ font-family: "Times New Roman", Georgia, Serif;
+}
+.yes {
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
+.align-center {
+  text-align: center;
+  
+}
+.second-contant {
+  padding-top: 40px;
+  padding-left: 250px;
+}
+.second-left-container {
+  padding-top: 14px;
+}
+.second-right-container {
+  float: right;
+  opacity: 70%;
+  padding-right: 300px;
+  padding-top: 50px;
+}
+.center { 
+  padding-left: 100;
+}
+.width {
+  width:70%;
+  height: 32px;
+}
+.style {
+  background-color: darkcyan;
+  padding: 89px 685px 68px 715px;
+  margin: 80px;
+}
+.color {
+  color: blue;
+}
+
+.letter {
+  bottom: 220px;
+  margin-left: 20px;
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+
+}
+.new{
+  margin: 0 0 0 600;
+  padding: 0 0 0 21px;
+}
+.empty{
+  padding: 20px;
+}
+.container{
+  padding: 10px;
+}
+.footer{
+  padding: 100;
+}

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+ #main div  {
+  width: 40px;
+  height: 40px;
+  background: red;
+  position: relative;
+  animation: myfirst 5s 2;
+  animation-direction: alternate;
+}
+
+@keyframes myfirst {
+  0%   {background: red; left: 0px; top: 0px;}
+  25%  {background: yellow; left: 200px; top: 0px;}
+  50%  {background: blue; left: 200px; top: 200px;}
+  75%  {background: green; left: 0px; top: 200px;}
+  100% {background: red; left: 0px; top: 0px;}
+}
+</style>
+</head>
+<body>
+
+<h1>animation-direction: alternate</h1>
+<style> 
+  #main {
+    width: 220px;
+    height: 300px;
+    border: 1px solid black; 
+    display: flex;
+    align-items: center;
+  }
+  
+  #main div {
+    flex: 1;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+  }
+  
+  </style>
+  <div id="main">
+    <div style="background-color:coral;min-height:30px;">RED</div>
+    <div style="background-color:lightblue;min-height:50px;">BLUE</div>  
+    <div style="background-color:lightgreen;min-height:190px;">Green div with more content.</div>
+  </div>
+
+
+  <style>
+    #example1 {
+      border: 10px dotted black;
+      padding: 15px;
+      background: lightblue;
+      background-clip: border-box;  
+    }
+    
+    #example2 {
+      border: 10px dotted black;
+      padding: 15px;
+      background: lightblue;
+      background-clip: padding-box;
+    }
+    
+    #example3 {
+      border: 10px dotted black;
+      padding: 15px;
+      background: lightblue;
+      background-clip: content-box;
+    }
+    </style>
+  
+    <h1>The background-clip Property</h1>
+    
+    <p>The background-clip property defines how far the background should extend within an element.</p>
+    
+    <p>background-clip: border-box (this is default):</p>
+    <div id="example1">
+      <p>The background extends behind the border.</p>
+    </div>
+    
+    <p>background-clip: padding-box:</p>
+    <div id="example2">
+      <p>The background extends to the inside edge of the border.</p>
+    </div>
+    
+    <p>background-clip: content-box:</p>
+    <div id="example3">
+      <p>The background extends to the edge of the content box.</p>
+    </div>
+
+    <style> 
+      #example4 {
+        border-style: solid;
+        border-bottom-style: dotted;
+        padding: 10px;
+        border-bottom-right-radius: 25px;
+        background:no-repeat url(src/workshop.jpg);
+      }
+      
+      #example5 {
+        border: 2px solid rgb(179, 179, 179);
+        border-left-color: coral;
+        padding: 10px;
+        border-bottom-left-radius: 50px 20px;
+        border-radius: 100px 20px;
+      }
+      </style>
+      
+      <h2>border-bottom-left-radius: 25px:</h2>
+      <div id="example4">
+        <p>The border-bottom-left-radius property defines the radius of the bottom-left corner.</p>
+      </div>
+      
+      <h2>border-bottom-left-radius: 50px 20px:</h2>
+      <div id="example5">
+        <p>If two values are set; the first one is for the bottom border, the second one for the left border.</p>
+      </div>
+      
+
+      <style>
+        img {
+           clip-path: circle(50%);
+        }
+        #borderimg1 {
+          border: 10px solid transparent;
+          padding: 15px;
+          border-image: url(src/border.png) round;
+          border-image-slice: 10%;
+        }
+        
+        #borderimg2 {
+          border: 10px solid transparent;
+          padding: 15px;
+          border-image: url(src/border.png) round;
+          border-image-slice: 20%;
+        }
+        
+        #borderimg3 {
+          border: 10px solid transparent;
+          padding: 15px;
+          border-image: url(src/border.png) round;
+          border-image-slice: 30%;
+
+        }
+        </style>
+        <h1>The border-image-slice Property</h1>
+        
+        <p id="borderimg1">border-image-slice: 10%;</p>
+        <p id="borderimg2">border-image-slice: 20%;</p>
+        <p id="borderimg3">border-image-slice: 30%;</p>
+
+
+        <style>
+          h1 {
+            border-left-style: solid;
+            border-left-color: coral;
+          }
+          
+          div {
+            border-style: solid;
+            border-left-color: coral;
+          }
+          </style>
+
+<h1>A heading with a colored left border</h1>
+
+<div>The border-left-color can be specified with a color name.</div>
+<style>
+div.parent {
+  position: relative;
+  height: 200px;
+  border: 3px solid red;
+}
+
+div.absolute {
+  position: absolute;
+  width: 50%;
+  bottom: 10px;
+  border: 3px solid #8AC007;
+} 
+
+div.relative {
+  position: relative;
+  width: 50%;
+  bottom: 5px;
+  border: 3px solid #8AC007;
+} 
+
+
+
+div.sticky {
+  position: sticky;
+  width: 50%;
+  bottom: 10px;
+  border: 3px solid #8AC007;
+} 
+</style>
+<h1>The bottom Property</h1>
+
+<div class="parent">This div element has position: relative;
+  <div class="absolute"><strong>position: absolute and bottom 10px</strong><br>This div's bottom edge is placed 10 pixels above the bottom edge of the containing element.</div>
+</div>
+<br>
+
+<div class="parent">This div element has position: relative;
+  <div class="relative"><strong>position: relative and bottom 5px</strong><br>This div's bottom edge is placed 5 pixels above its normal position.</div>
+</div>
+<br>
+
+<div class="fixed"><strong>position: fixed and bottom 10px</strong><br>This div's bottom edge is placed 10 pixels from the bottom of the viewport.</div>
+
+<div class="parent">This div element has position: relative;
+  <div class="sticky"><strong>position: sticky and bottom 10px</strong><br>This div is sticky.</div>
+</div>
+
+
+<style> 
+  #example5 {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px;
+  }
+  
+  #example6 {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+  }
+  
+  #example7 {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px red;
+  }
+  </style>
+  
+  <h1>The box-shadow Property</h1>
+  <p>The box-shadow property defines the shadow of an element:</p>
+  
+  <h2>box-shadow: 5px 10px:</h2>
+  <div id="example5">
+    <p>A div element with a shadow. The first value is the horizontal offset and the second value is the vertical offset. The shadow color will be inherited from the text color.</p>
+  </div>
+  
+  <h2>box-shadow: 5px 10px #888888:</h2>
+  <div id="example6">
+    <p>You can also define the color of the shadow. Here the shadow color is grey.</p>
+  </div>
+  
+  <h2>box-shadow: 5px 10px red:</h2>
+  <div id="example7">
+    <p>A red shadow.</p>
+  </div>
+  <style> 
+    .newspaper {
+      column-count: 3;
+      column-gap: 40px;
+      column-rule: 4px double #ff00ff;
+    }
+  </style>
+
+<div class="newspaper">
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+  </div>
+  
+
+  <style>
+    body {
+      /* Set "my-sec-counter" to 0 */
+      counter-reset: my-sec-counter;
+    }
+    
+    h2::before {
+      /* Increment "my-sec-counter" by 1 */
+      counter-increment: my-sec-counter;
+      content: "Section " counter(my-sec-counter) ". ";
+    }
+    </style>
+    
+    <h2>HTML Tutorial</h2>
+    <h2>CSS Tutorial</h2>
+    <h2>JavaScript Tutorial</h2>
+    <h2>Bootstrap Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>PHP Tutorial</h2>
+    
+
+<style>
+    div {
+      width: 150px; 
+      border: 1px solid #000000;
+    }
+    
+    div.a {
+      word-wrap: normal;
+    }
+    
+    div.b {
+      word-wrap: break-word;
+    }
+    </style>
+
+    
+    <h1>The word-wrap Property</h1>
+    
+    <h2>word-wrap: normal (default):</h2>
+    <div class="a"> This div contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will not break and wrap to the next line.</div>
+    
+    <h2>word-wrap: break-word:</h2>
+    <div class="b"> This div contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</div>
+    
+<style>
+    p.a { 
+      word-spacing: normal;
+    }
+    
+    p.b { 
+      word-spacing: 30px;
+    }
+    
+    p.c { 
+      word-spacing: 1cm;
+    }
+    </style>
+ 
+    <h1>The word-spacing Property</h1>
+    
+    <h2>word-spacing: normal:</h2>
+    <p class="a">This is some text. This is some text.</p>
+    
+    <h2>word-spacing: 30px:</h2>
+    <p class="b">This is some text. This is some text.</p>
+    
+    <h2>word-spacing: 1cm:</h2>
+    <p class="c">This is some text. This is some text.</p>
+
+
+    <style> 
+      #myDIV {
+        border: 1px solid black;
+        animation: mymove 5s infinite;
+      }
+      
+      @keyframes mymove {
+        50% {word-spacing: 50px;}
+      }
+      </style>
+      </head>
+      <body>
+      
+      <h1>Animation of word-spacing</h1>
+      
+      <p>Gradually change the word-spacing of the div element from "normal" to 50px, and back to "normal":<p>
+      
+      <div id="myDIV" >
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+      </div>
+      
+ 
+      <style>
+        div.a {
+          width: auto;
+          border: 1px solid black;
+        }
+        
+        div.b {
+          width: 150px;
+          border: 1px solid black;  
+        }
+        
+        div.c {
+          width: 50%;
+          border: 1px solid black;  
+        }
+        </style>
+        </head>
+        <body>
+        <h1>The width Property</h1>
+        
+        <h2>width: auto (default)</h2>
+        <div class="a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat.</div>
+        
+        <h2>width: 150px</h2>
+        <div class="b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat.</div>
+        
+        <h2>width: 50%</h2>
+        <div class="c">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat.</div>
+
+
+        <style>
+          p.a {
+            white-space: nowrap;
+          }
+          
+          p.b {
+            white-space: normal;
+          }
+          
+          p.c {
+            white-space: pre;
+          }
+          </style>
+          </head>
+          <body>
+          
+          <h1>The white-space Property</h1>
+          
+          <h2>white-space: nowrap:</h2>
+          <p class="a">
+          This is some text. This is some text. This is some text.
+          This is some text. This is some text. This is some text.
+          This is some text. This is some text. This is some text.
+          This is some text. This is some text. This is some text.
+          </p>
+          
+          <h2>white-space: normal:</h2>
+          <p class="b">
+          This is some text. This is some text. This is some text.
+          This is some text. This is some text. This is some text.
+          This is some text. This is some text. This is some text.
+          This is some text. This is some text. This is some text.
+          </p>
+          
+          <h2>white-space: pre:</h2>
+          <p class="c">
+          This is some text. This is some text. This is some text.
+          This is some text. This is some text. This is some text.
+          This is some text. This is some text. This is some text.
+          This is some text. This is some text. This is some text.
+          </p>
+
+          <style>
+            h2.a {
+              visibility: visible;
+            }
+            
+            h2.b {
+              visibility: hidden;
+            }
+            </style>
+            </head>
+            <body>
+            
+            <h1>The visibility Property</h1>
+            
+            <h2 class="a">This heading is visible</h2>
+            
+            <h2 class="b">This heading is hidden</h2>
+            
+            <p>Notice that the hidden heading still takes up space on the page.</p>
+
+            <style>
+              #this {
+                margin: auto;
+                width: 400px;
+                height: 200px;
+                background-color: lightblue;
+                border: 1px solid black;
+              }
+              #that {
+                margin: auto;
+                width: 400px;
+                height: 200px;
+                background-color: lightblue;
+                border: 1px solid black;
+              }
+              </style>
+              </head>
+              <body>
+              
+              <h1>Change visibility with JavaScript</h1>
+              
+              <p>Click the "Try it" button to set the visibility property of the DIV element to "hidden":</p>
+              
+              <button onclick="myFunction()">Try it</button>
+              <button onclick="call()">Try it</button>
+              
+              <div id="this">This is my DIV element.</div>
+              
+              <p><strong>Note</strong>: Hidden elements still take up space on the page.</p>
+              
+              <script>
+              function myFunction() {
+                document.getElementById("this").style.visibility = "hidden";
+              }
+              function call() {
+                document.getElementById("that").style.visibility = "visible";
+              }
+              </script>
+    
+
+    <style>
+      img.a {
+        vertical-align: baseline;
+      }
+      
+      img.b {
+        vertical-align: text-top;
+      }
+      
+      img.c {
+        vertical-align: text-bottom;
+      }
+      
+      img.d {
+        vertical-align: sub;
+      }
+      
+      img.e {
+        vertical-align: super;
+      }
+      </style>
+      </head>
+      <body>
+      
+      <h1>The vertical-align Property</h1>
+      
+      <h2>vertical-align: baseline (default):</h2>
+      <p>An <img class="a" src="src/wine.jpg" width="9" height="9"> image with a default alignment.</p> 
+      
+      <h2>vertical-align: text-top:</h2>
+      <p>An <img class="b" src="src/wine.jpg" width="9" height="9"> image with a text-top alignment.</p> 
+      
+      <h2>vertical-align: text-bottom:</h2>
+      <p>An <img class="c" src="src/wine.jpg" width="9" height="9"> image with a text-bottom alignment.</p>
+      
+      <h2>vertical-align: sub:</h2>
+      <p>An <img class="d" src="src/wine.jpg" width="9" height="9"> image with a sub alignment.</p> 
+      
+      <h2>vertical-align: sup:</h2>
+      <p>An <img class="e" src="src/wine.jpg" width="9" height="9"> image with a super alignment.</p>
+      
+      <style>
+        div.ex1 {
+          direction: rtl;
+          unicode-bidi: bidi-override;
+        }
+        </style>
+        <h1>The unicode-bidi Property</h1>
+        <div>Some text. Default writing direction.</div>
+        <div class="ex1">Some text. Right-to-left direction.</div>   
+    
+
+        <style>
+          #div7 {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            margin: 100px;
+            padding: 10px;
+            border: 1px solid black;
+          }
+          
+          #div8 {
+            padding: 50px;
+            position: absolute;
+            border: 1px solid black;
+            background-color: red;
+            transform: rotateY(60deg);
+            transform-style: preserve-3d;
+          }
+          
+          #div9 {
+            padding: 40px;
+            position: absolute;
+            border: 1px solid black;
+            background-color: yellow;
+            transform: rotateY(-60deg);
+          
+          }
+          </style>
+          </head>
+          <body>
+          
+          <h1>The transform-style Property</h1>
+          
+          <div id="div7">
+            <div id="div8">HELLO
+            <div id="div9">YELLOW</div>
+            </div>
+          </div>
+          
+          <style> 
+            div.e {
+              width: 150px;
+              height: 80px;
+              background-color: yellow;
+              -ms-transform: rotate(20deg); /* IE 9 */
+              transform: rotate(20deg);
+            }
+            
+            div.f {
+              width: 150px;
+              height: 80px;
+              background-color: yellow;
+              -ms-transform: skewY(20deg); /* IE 9 */
+              transform: skewY(20deg);
+            }
+            
+            div.g {
+              width: 150px;
+              height: 80px;
+              background-color: yellow;
+              -ms-transform: scaleY(1.5); /* IE 9 */
+              transform: scaleY(1.5);
+            }
+            </style>
+            </head>
+            <body>
+            
+            <h1>The transform Property</h1>
+            
+            <h2>transform: rotate(20deg):</h2>
+            <div class="e">Hello World!</div>
+            <br>
+            
+            <h2>transform: skewY(20deg):</h2>
+            <div class="f">Hello World!</div>
+            <br>
+            
+            <h2>transform: scaleY(1.5):</h2>
+            <div class="g">Hello World!</div>
+
+
+            <style>
+              h3 {
+                text-shadow: 2px 2px #FF0000;
+              }
+              </style>
+              </head>
+              <body>
+              
+              <h3>The text-shadow Property</h3>
+
+              <button onclick="myFunction()">Try it</button>
+
+<h1 id="myH1">This is my header</h1>
+
+<script>
+function myFunction() {
+  document.getElementById("myH1").style.textShadow = "2px 5px 5px red";
+}
+</script>
+</body>
+</html>
